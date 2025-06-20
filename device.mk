@@ -68,8 +68,9 @@ PRODUCT_PACKAGES += \
     FM2
 
 # Init
-$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
-        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
+PRODUCT_PACKAGES += \
+    init.lake.rc \
+    init.recovery.lake.rc
 
 # Moto Camera 2
 TARGET_MOTCAMERA2 := denali
@@ -91,10 +92,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.lake.rc:root/init.recovery.lake.rc
 
 # Sensors
 PRODUCT_COPY_FILES += \
