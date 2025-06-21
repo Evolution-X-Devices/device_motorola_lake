@@ -19,9 +19,6 @@ $(call inherit-product, vendor/motorola/lake/lake-vendor.mk)
 
 PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 PRODUCT_PACKAGES += \
     AvoidAppsInCutoutOverlay \
     NoCutoutOverlay
@@ -92,6 +89,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
+
+# Overlay
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    SettingsResDevice \
+    SettingsProviderResDevice \
+    SystemUIResDevice
 
 # Sensors
 PRODUCT_COPY_FILES += \
