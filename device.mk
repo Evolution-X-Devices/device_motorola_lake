@@ -55,6 +55,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.ramdisk \
     init.lake.rc \
     init.recovery.lake.rc
 
