@@ -21,4 +21,4 @@ PRODUCT_NAME := lineage_lake
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="lake-user 10 QPWS30.61-21-18-7-12 b1002 release-keys" \
     BuildFingerprint=motorola/lake_retail/lake:10/QPWS30.61-21-18-7-12/b1002:user/release-keys \
-    DeviceName=lake
+    DeviceProduct=lake_retail
