@@ -66,6 +66,11 @@ TARGET_USES_MOTCAMERA2 := true
 
 $(call inherit-product, vendor/motorola/MotCamera2/motcamera2.mk)
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sdm,enable_dm,false)
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+$(call soong_config_set,livedisplay_sysfs,enable_se,true)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
